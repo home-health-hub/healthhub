@@ -1,0 +1,40 @@
+# Health Hub
+
+Preliminary architecture and design documentation for Health Hub — a personal/household health-data appliance that provides a unified Web UI, API, and MQTT interface around a set of independent health-device daemons, without replacing those daemons as the authoritative source of their own device data.
+
+**Status: documentation only.** This repository currently contains no code — it's the architecture and design specification produced before implementation begins.
+
+## Related daemons
+
+Health Hub aggregates data from these independently-usable device daemons:
+
+- [trividia-truemetrix-daemon](https://github.com/bonelifer/trividia-truemetrix-daemon) — TrueMetrix glucose meter
+- [viatom-o2ring-daemon](https://github.com/bonelifer/viatom-o2ring-daemon) — Viatom O2Ring pulse oximeter
+- [etekcity-scale-daemon](https://github.com/bonelifer/etekcity-scale-daemon) — Etekcity smart scale
+- [etekcity-bp-daemon](https://github.com/bonelifer/etekcity-bp-daemon) — Etekcity blood pressure monitor
+
+Each daemon remains fully usable on its own — installing Health Hub is never a prerequisite for using any of them individually.
+
+## Documentation
+
+- [`docs/Preliminary.md`](docs/Preliminary.md) — Preliminary Architecture and Design Specification: governance and operations (administrator roles, permissions, backup, notifications, session/auth flow, software lifecycle) plus the core architectural principles.
+- [`docs/Claude-foundation.md`](docs/Claude-foundation.md) — Health Hub Technical Design Specification: the data model, profile/device handling, measurement semantics, dashboard, REST API, and MQTT/Home Assistant Discovery architecture.
+- [`docs/Claude-Addendum-HA.md`](docs/Claude-Addendum-HA.md) — Home Assistant MQTT Discovery Addendum: the HA-specific subset of the MQTT design in more detail.
+
+## Acknowledgments
+
+Architecture review, documentation synthesis, and related daemon code review assisted by [Claude](https://www.anthropic.com/claude).
+
+## Contributing
+
+Contributions are welcome!
+
+- **Bug reports**: [Open an issue](https://github.com/bonelifer/healthhub/issues).
+- **Everything else** (questions, feature requests, ideas, general discussion): [Use Discussions](https://github.com/bonelifer/healthhub/discussions).
+- Pull requests are welcome for bug fixes or discussed features.
+
+## License
+
+This project is licensed under the **GNU General Public License v3.0**.
+
+See [LICENSE](LICENSE) for more information.

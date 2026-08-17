@@ -1,0 +1,37 @@
+name: Bug report
+description: Report an error, inconsistency, or broken content in the documentation
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: document
+    attributes:
+      label: Which document?
+      options:
+        - docs/Preliminary.md
+        - docs/Claude-foundation.md
+        - docs/Claude-Addendum-HA.md
+        - README.md
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: section
+    attributes:
+      label: Section or line reference
+      description: Section number/heading, or a link to the specific line on GitHub, if you have one.
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: What's wrong?
+      description: Describe the error, inconsistency, or contradiction you found.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested fix
+      description: Optional — if you already have a proposed correction.
+    validations:
+      required: false
