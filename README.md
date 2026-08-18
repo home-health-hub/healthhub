@@ -1,5 +1,9 @@
 # Health Hub
 
+<p align="center">
+  <img src="docs/images/home-health-hub.png" alt="Health Hub logo" width="320">
+</p>
+
 Preliminary architecture and design documentation for Health Hub — a personal/household health-data appliance that provides a unified Web UI, API, and MQTT interface around a set of independent health-device daemons, without replacing those daemons as the authoritative source of their own device data.
 
 **Status: documentation only.** This repository currently contains no code — it's the architecture and design specification produced before implementation begins.
