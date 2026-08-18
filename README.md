@@ -8,10 +8,10 @@ Preliminary architecture and design documentation for Health Hub — a personal/
 
 Health Hub aggregates data from these independently-usable device daemons:
 
-- [trividia-truemetrix-daemon](https://github.com/bonelifer/trividia-truemetrix-daemon) — TrueMetrix glucose meter
-- [viatom-o2ring-daemon](https://github.com/bonelifer/viatom-o2ring-daemon) — Viatom O2Ring pulse oximeter
-- [etekcity-scale-daemon](https://github.com/bonelifer/etekcity-scale-daemon) — Etekcity smart scale
-- [etekcity-bp-daemon](https://github.com/bonelifer/etekcity-bp-daemon) — Etekcity blood pressure monitor
+- [trividia-truemetrix-daemon](https://github.com/home-health-hub/trividia-truemetrix-daemon) — TrueMetrix glucose meter
+- [viatom-o2ring-daemon](https://github.com/home-health-hub/viatom-o2ring-daemon) — Viatom O2Ring pulse oximeter
+- [etekcity-scale-daemon](https://github.com/home-health-hub/etekcity-scale-daemon) — Etekcity smart scale
+- [etekcity-bp-daemon](https://github.com/home-health-hub/etekcity-bp-daemon) — Etekcity blood pressure monitor
 
 Each daemon remains fully usable on its own — installing Health Hub is never a prerequisite for using any of them individually.
 
@@ -29,8 +29,8 @@ Architecture review, documentation synthesis, and related daemon code review ass
 
 Contributions are welcome!
 
-- **Bug reports**: [Open an issue](https://github.com/bonelifer/healthhub/issues).
-- **Everything else** (questions, feature requests, ideas, general discussion): [Use Discussions](https://github.com/bonelifer/healthhub/discussions).
+- **Bug reports**: [Open an issue](https://github.com/home-health-hub/healthhub/issues).
+- **Everything else** (questions, feature requests, ideas, general discussion): [Use Discussions](https://github.com/home-health-hub/healthhub/discussions).
 - Pull requests are welcome for bug fixes or discussed features.
 
 ## License
