@@ -28,7 +28,8 @@ Each daemon remains fully usable on its own — installing Health Hub is never a
 
 ## Acknowledgments
 
-Architecture review, documentation synthesis, and related daemon code review assisted by [Claude](https://www.anthropic.com/claude).
+- Architecture review, documentation synthesis, and related daemon code review assisted by [Claude](https://www.anthropic.com/claude).
+- Branding development, documentation, and repository maintenance assisted by [OpenAI Codex](https://openai.com/codex/).
 
 ## Contributing
 
