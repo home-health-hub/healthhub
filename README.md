@@ -4,6 +4,10 @@
   <img src="docs/images/home-health-hub.png" alt="Health Hub logo" width="240">
 </p>
 
+![Documentation](https://img.shields.io/badge/project-documentation-168E98) ![Bluetooth LE](https://img.shields.io/badge/Bluetooth-LE-0082FC?logo=bluetooth&logoColor=white) ![USB HID](https://img.shields.io/badge/USB-HID-FF7A61?logo=usb&logoColor=white)
+
+[![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue)](https://github.com/home-health-hub/healthhub/blob/main/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/home-health-hub/healthhub#contributing) [![Discussions](https://img.shields.io/badge/discussions-welcome-blue)](https://github.com/home-health-hub/healthhub/discussions)
+
 Preliminary architecture and design documentation for Health Hub — a personal/household health-data appliance that provides a unified Web UI, API, and MQTT interface around a set of independent health-device daemons, without replacing those daemons as the authoritative source of their own device data.
 
 **Status: documentation only.** This repository currently contains no code — it's the architecture and design specification produced before implementation begins.
