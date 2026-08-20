@@ -20,6 +20,8 @@ Health Hub aggregates data from these independently-usable device daemons:
 - [viatom-o2ring-daemon](https://github.com/home-health-hub/viatom-o2ring-daemon) — Viatom O2Ring pulse oximeter
 - [etekcity-scale-daemon](https://github.com/home-health-hub/etekcity-scale-daemon) — Etekcity smart scale
 - [etekcity-bp-daemon](https://github.com/home-health-hub/etekcity-bp-daemon) — Etekcity blood pressure monitor
+- [health-thermometer-daemon](https://github.com/home-health-hub/health-thermometer-daemon) — standard Bluetooth Health Thermometer Profile devices
+- [easyathome-bbt-daemon](https://github.com/home-health-hub/easyathome-bbt-daemon) — Easy@Home EBT-300 basal body thermometer
 
 Each daemon remains fully usable on its own — installing Health Hub is never a prerequisite for using any of them individually.
 
