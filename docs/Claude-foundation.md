@@ -1218,6 +1218,34 @@ Each of the four existing daemon APIs is now versioned under `/api/v1/` and expo
 
 The API must not create a second permission system: it should expose the same authorization model used elsewhere in the Hub, so a `curl`/script client cannot bypass restrictions that would apply through another interface. Scoped, individually revocable API credentials may be issued for automation (for example, a read-only credential for a personal export script) without affecting the owner's normal login credentials.
 
+## 40.1 Per-Daemon Pages: Paginated Reading History (Read-Only)
+
+The Hub's web UI will have a dedicated page per daemon, not only an aggregate dashboard. A per-daemon page needs to browse a device's full reading history, not just its current/recent value — but the Hub still should not duplicate a daemon's complete historical database (Section 3) to do this.
+
+Each daemon's versioned API should expose a paginated read-only history endpoint alongside the existing `/latest` and `/report` endpoints, for example:
+
+```text
+GET /api/v1/readings?page=<n>&per_page=<n>
+```
+
+The response should include enough to render a pager (total count and/or a `has_more` flag). The exact pagination style (offset-based `page`/`per_page` vs. a cursor) should be finalized before implementation, but should be consistent across every daemon so the Hub's per-daemon page code isn't written differently per device type. Support for this endpoint should be advertised in `/api/v1/capabilities`, so the Hub can detect whether an older daemon predates it before offering that UI affordance.
+
+This does not change the Hub-to-daemon relationship described in Section 3: the Hub still never touches a daemon's database directly, it only gains a second read shape (a paginated list) through the same versioned API it already uses for `/latest` and `/report`.
+
+## 40.2 Manual (Non-Device-Sourced) Entries — Write
+
+Not every relevant data point comes from the physical device. The planned BBT (Basal Body Temperature) daemon is the first case: fertility charting conventionally combines the device-measured temperature with information no device can produce — cervical mucus consistency, OPK/LH test results, cervix position, intercourse timing, symptoms/notes. That information still needs to live alongside the rest of a cycle's data, associated with the same profile and date as a device reading, or recorded on its own on days with no device reading at all.
+
+The Hub having a per-daemon page raises the question of where a user enters this. The answer is not looser Hub access to a daemon's database — that would break the single-writer guarantee behind Section 3 and reintroduce the SQLite multi-writer contention the daemon-owns-its-data principle was designed to avoid. Instead, a daemon that needs this capability exposes its own write endpoint on its versioned API, for example:
+
+```text
+POST /api/v1/manual-entry
+```
+
+The daemon remains the sole writer to its own database. The Hub's per-daemon page is a thin form in front of this endpoint, submitting on the user's behalf like any other API client. Every stored reading should carry a `source` field (`device` vs. `manual`) so reports, MQTT payloads, and dashboards can distinguish user-entered data from device-measured data without inferring it from the value itself.
+
+This keeps the write path consistent with the read path: entirely through that daemon's own versioned REST API, never direct file/database access from the Hub. Support, and which fields are accepted, should be advertised via `/api/v1/capabilities` (for example `manual_entry: true/false` plus a field list), since most existing daemons have no non-device fields and have no reason to implement this endpoint at all.
+
 ---
 
 # 41. Data Quality
