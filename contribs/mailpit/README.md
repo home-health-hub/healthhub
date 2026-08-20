@@ -8,21 +8,23 @@ This is for local development and testing only, not a stand-in for a
 production mail setup. The web UI, SMTP, and POP3 are all auth-gated
 against a shared password file, managed by
 [bonelifer/mailpit-auth](https://github.com/bonelifer/mailpit-auth) rather
-than vendored into this repo — fetch it with `setup.sh` below.
+than vendored into this repo — fetch the two scripts with `setup.sh` below.
 
 ## Setup
 
-1. Fetch the mailpit-auth tool (re-run any time to pull the latest):
+1. Fetch `mailpit-auth.py` and `set-bind-address.py` (re-run any time to
+   pull the latest version):
 
    ```bash
    ./setup.sh
    ```
 
-2. Add at least one user — this creates `data/passwords.txt` and wires
-   `docker-compose.yml`'s SMTP allowed-recipients list to match:
+2. Add at least one user — this creates `data/passwords.txt` and, since the
+   script sits next to `docker-compose.yml`, auto-detects it and wires its
+   SMTP allowed-recipients list to match:
 
    ```bash
-   ./mailpit-auth/mailpit-auth.py -y ./docker-compose.yml alice:hunter2
+   ./mailpit-auth.py alice:hunter2
    ```
 
 3. Start Mailpit:
