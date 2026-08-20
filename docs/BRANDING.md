@@ -27,6 +27,7 @@ The artwork uses gradients, so these values are anchors rather than strict singl
 | Coral | Heart, pulse, and selected measurement accents | `#FF7A61` |
 | Warm gold | Glucose transport accent | `#F5A623` |
 | Oxygen blue | SpO2-specific live-data accent | `#28B9E8` |
+| Cycle plum | Basal body temperature and cycle-tracking accents | `#8E5AA7` |
 
 The Bluetooth icon uses the same teal-to-turquoise treatment in every repository. Device-specific colors belong on the measurement path or related detail, not on the Bluetooth mark.
 
@@ -56,3 +57,5 @@ Use meaningful alt text that states the device, connection method, and local des
 ## Adding another device
 
 Start from the same background, teal device family, Bluetooth treatment, typography, spacing, and local-storage motif. Choose one complementary accent based on the new measurement type. Keep that accent subordinate to the shared teal palette so the full set still reads as one system.
+
+For basal body temperature and cycle tracking, use cycle plum for the measurement path, chart-and-cycle detail, or related emphasis. Keep the thermometer, Bluetooth mark, home-computing elements, and local-storage motif in the shared teal and aqua family.
