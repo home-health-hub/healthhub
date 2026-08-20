@@ -1,0 +1,4 @@
+Preliminary.md			# governance/operations: administrator roles, permissions, backup, notifications, session/auth flow
+Claude-foundation.md		# technical design: data model, profiles, measurement semantics, dashboard, REST API, MQTT
+Claude-Addendum-HA.md		# Home Assistant MQTT Discovery addendum (HA-specific subset of the MQTT design)
+BRANDING.md			# shared visual language, palette, README banner rules, daemon artwork
