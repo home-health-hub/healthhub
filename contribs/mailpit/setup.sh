@@ -1,22 +1,20 @@
 #!/usr/bin/bash
-# Fetches bonelifer/mailpit-auth into ./mailpit-auth/ so its tools (auth-file
-# management, bind-address switching) can manage this folder's
-# docker-compose.yml. Not vendored directly in this repo so there's a single
-# source of truth. Safe to re-run: pulls the latest instead of re-cloning.
+# Fetches just the two scripts this folder needs from bonelifer/mailpit-auth
+# (not the whole repo, so its README.md/LICENSE/etc. don't land here too).
+# Not vendored directly in this repo so there's a single source of truth.
+# Safe to re-run: overwrites with the latest version each time.
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_URL="https://github.com/bonelifer/mailpit-auth.git"
-DEST_DIR="$SCRIPT_DIR/mailpit-auth"
+RAW_BASE="https://raw.githubusercontent.com/bonelifer/mailpit-auth/main"
 
-if [ -d "$DEST_DIR/.git" ]; then
-    git -C "$DEST_DIR" pull --ff-only
-else
-    git clone "$REPO_URL" "$DEST_DIR"
-fi
+for f in mailpit-auth.py set-bind-address.py; do
+    curl -fsSL "$RAW_BASE/$f" -o "$SCRIPT_DIR/$f"
+    chmod +x "$SCRIPT_DIR/$f"
+done
 
-echo "mailpit-auth is ready in $DEST_DIR"
+echo "Fetched mailpit-auth.py and set-bind-address.py into $SCRIPT_DIR"
 echo
 echo "Add a user and wire up the SMTP allowed-recipients list, run from"
 echo "this directory ($SCRIPT_DIR):"
-echo "  ./mailpit-auth/mailpit-auth.py -y ./docker-compose.yml <user>:<password>"
+echo "  ./mailpit-auth.py <user>:<password>"

@@ -1,3 +1,4 @@
 data/
-mailpit-auth/
+mailpit-auth.py
+set-bind-address.py
 config.ini
