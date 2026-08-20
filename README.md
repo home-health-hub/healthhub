@@ -30,6 +30,13 @@ Each daemon remains fully usable on its own — installing Health Hub is never a
 - [`docs/Claude-foundation.md`](docs/Claude-foundation.md) — Health Hub Technical Design Specification: the data model, profile/device handling, measurement semantics, dashboard, REST API, and MQTT/Home Assistant Discovery architecture.
 - [`docs/Claude-Addendum-HA.md`](docs/Claude-Addendum-HA.md) — Home Assistant MQTT Discovery Addendum: the HA-specific subset of the MQTT design in more detail.
 
+## Contribs
+
+[`contribs/`](contribs/) — reference `docker-compose` stacks (a Mosquitto
+broker pre-configured with the §26.2 publish-rights ACL model, and a Mailpit
+SMTP server) for exercising the designs above locally. Not part of Health
+Hub itself.
+
 ## Acknowledgments
 
 - Architecture review, documentation synthesis, and related daemon code review assisted by [Claude](https://www.anthropic.com/claude).
