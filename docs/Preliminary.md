@@ -402,6 +402,8 @@ Enrollment:
 
 Once enabled, login requires the account password and either a valid TOTP code or an unused backup code. Disabling TOTP requires the current password (and a valid TOTP code/backup code, if still available), mirroring the disable/revoke pattern used for administrative keys in Section 15. The TOTP secret is stored encrypted at rest, since verification requires decrypting it rather than hashing; backup codes are hashed like passwords, since they're only ever compared, never decrypted.
 
+As a last resort — the account holder has lost their authenticator device and their backup codes — the SHA can reset TOTP on any account, removing it so the user can log in with just their password and re-enroll. This is the same class of action as SHA-initiated key changes/rotation in Section 15, and should be logged in the audit trail accordingly. It recovers login access only; it does not grant the SHA access to that user's health data, which remains governed entirely by that user's own delegation (Health Data Access, Section 15).
+
 ## 13. Main Hub Interface
 
 The Web UI is the primary viewing and interaction interface.
