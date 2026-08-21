@@ -27,6 +27,8 @@ Each daemon remains fully usable on its own — installing Health Hub is never a
 
 ## Documentation
 
+Also browsable as a website: **[home-health-hub.github.io/healthhub](https://home-health-hub.github.io/healthhub/)**.
+
 - [`docs/BRANDING.md`](docs/BRANDING.md) — Shared visual language, palette, README banner rules, and current daemon artwork.
 - [`docs/Preliminary.md`](docs/Preliminary.md) — Preliminary Architecture and Design Specification: governance and operations (administrator roles, permissions, backup, notifications, session/auth flow, software lifecycle) plus the core architectural principles.
 - [`docs/Claude-foundation.md`](docs/Claude-foundation.md) — Health Hub Technical Design Specification: the data model, profile/device handling, measurement semantics, dashboard, REST API, and MQTT/Home Assistant Discovery architecture.

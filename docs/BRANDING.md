@@ -1,3 +1,8 @@
+---
+title: Branding
+layout: default
+---
+
 # Home Health Hub branding
 
 The canonical branding documentation, approved assets, design tokens, and adoption requirements are maintained in the [Home Health Hub branding repository](https://github.com/home-health-hub/healthhub-branding).

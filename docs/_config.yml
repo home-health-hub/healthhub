@@ -1,0 +1,11 @@
+title: Health Hub
+description: >-
+  A personal/household health-data appliance that provides a unified Web UI,
+  API, and MQTT interface around a set of independent health-device daemons,
+  without replacing those daemons as the authoritative source of their own
+  device data.
+theme: jekyll-theme-cayman
+markdown: kramdown
+show_downloads: false
+exclude:
+  - filenames.txt

@@ -1,3 +1,8 @@
+---
+title: Technical Design Specification
+layout: default
+---
+
 # Health Hub Technical Design Specification
 
 ## 1. Purpose
