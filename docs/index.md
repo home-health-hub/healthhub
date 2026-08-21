@@ -5,10 +5,12 @@ layout: default
 
 # Health Hub
 
-A personal/household health-data appliance that provides a unified Web UI,
-API, and MQTT interface around a set of independent health-device daemons,
-without replacing those daemons as the authoritative source of their own
-device data.
+Health Hub brings the health devices you already use — a glucose meter, a
+blood pressure cuff, a thermometer, a pulse oximeter ring, a smart scale —
+into one place, on a computer in your own home. Each device keeps its own
+program in charge of its own data; Health Hub just adds one dashboard, one
+API, and one MQTT feed on top, without becoming a second copy of the
+truth.
 
 **Status: documentation only.** The [healthhub repository](https://github.com/home-health-hub/healthhub)
 currently contains no code — it's the architecture and design specification
