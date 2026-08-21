@@ -48,6 +48,10 @@ Hub itself.
 - Architecture review, documentation synthesis, and related daemon code review assisted by [Claude](https://www.anthropic.com/claude).
 - Branding development, documentation, and repository maintenance assisted by [OpenAI Codex](https://openai.com/codex/).
 
+## TODO
+
+Ideas not yet built, practical and speculative alike: [`docs/TODO.md`](docs/TODO.md).
+
 ## Contributing
 
 Contributions are welcome!
