@@ -35,6 +35,10 @@ with or without Health Hub:
 - [Home Assistant MQTT Discovery Addendum](Claude-Addendum-HA.html) — the HA-specific subset of the MQTT design in more detail.
 - [Branding](BRANDING.html) — pointer to the canonical [branding repository](https://github.com/home-health-hub/healthhub-branding).
 
+## Design notes (not yet implemented)
+
+- [Branding Sync Automation](BRANDING_SYNC_AUTOMATION.html) — a proposed CI workflow to keep each daemon's branding assets in sync with the canonical branding repo automatically, with a human merge gate on every visual change.
+
 ## Elsewhere
 
 - [Organization](https://github.com/home-health-hub) — every repository, including each daemon and its BLE/USB driver library.

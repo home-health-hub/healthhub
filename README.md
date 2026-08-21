@@ -33,6 +33,7 @@ Also browsable as a website: **[home-health-hub.github.io/healthhub](https://hom
 - [`docs/Preliminary.md`](docs/Preliminary.md) — Preliminary Architecture and Design Specification: governance and operations (administrator roles, permissions, backup, notifications, session/auth flow, software lifecycle) plus the core architectural principles.
 - [`docs/Claude-foundation.md`](docs/Claude-foundation.md) — Health Hub Technical Design Specification: the data model, profile/device handling, measurement semantics, dashboard, REST API, and MQTT/Home Assistant Discovery architecture.
 - [`docs/Claude-Addendum-HA.md`](docs/Claude-Addendum-HA.md) — Home Assistant MQTT Discovery Addendum: the HA-specific subset of the MQTT design in more detail.
+- [`docs/BRANDING_SYNC_AUTOMATION.md`](docs/BRANDING_SYNC_AUTOMATION.md) — **Design proposal, not yet implemented.** A CI workflow to keep each daemon's branding assets in sync with the canonical branding repo automatically, with a human merge gate on every visual change.
 
 ## Contribs
 
