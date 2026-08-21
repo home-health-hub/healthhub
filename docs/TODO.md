@@ -105,3 +105,25 @@ catalog beyond just these two items if scale-brand support ever expands.
   every device this project currently supports — an 8-user onboard
   database and consent-code-gated access tied to BLE bonding, versus
   "connect and read a value."
+- **Standard Bluetooth SIG Blood Pressure GATT profile monitors.**
+  [UBPM (LazyT)](https://codeberg.org/lazyt/ubpm), a mature cross-platform
+  (Qt) blood pressure data manager (GPL-3.0, license verified directly
+  from its `LICENSE` file), documents a "Generic Bluetooth Plugin" that
+  reads the official Bluetooth SIG Blood Pressure Service (`0x1810`) /
+  Blood Pressure Measurement characteristic (`0x2A35`) — confirmed by
+  their own docs to work across multiple vendors through that one plugin,
+  not per-vendor code: Beurer (BC54/BM54/BM64/BM81), Hartmann (BPW26
+  Compact+), and Omron (HEM-7361T, "maybe all"). Same situation as the
+  scale-profile item above and the original reasoning behind
+  `health-thermometer-ble`: `etekcity-bp-daemon` is currently
+  Etekcity-proprietary, and if Etekcity's own monitor doesn't implement
+  the standard profile (unconfirmed either way — it's not in UBPM's
+  table), a separate standard-profile BP driver built against the actual
+  Bluetooth SIG spec could support Beurer/Hartmann/Omron/others through
+  one implementation — a new sibling driver, not a replacement. Caveat:
+  BLE pairing/bonding complexity varies even under the "generic" profile
+  — some devices need a 6-digit PIN pairing step, and Omron needs special
+  handling per UBPM's own wiki (their troubleshooting page has a
+  dedicated "no answer from device" section for it) — this is real
+  pairing/bonding, not the simple connect-and-read pattern the
+  thermometer driver gets away with.
