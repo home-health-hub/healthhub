@@ -1,3 +1,8 @@
+---
+title: Home Assistant MQTT Discovery Addendum
+layout: default
+---
+
 # Health Hub — Home Assistant MQTT Discovery Addendum
 
 ## 1. Purpose

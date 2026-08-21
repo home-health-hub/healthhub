@@ -1,3 +1,8 @@
+---
+title: Preliminary Architecture and Design Specification
+layout: default
+---
+
 # Health Hub — Preliminary Architecture and Design Specification
 
 > **Status:** Preliminary  
