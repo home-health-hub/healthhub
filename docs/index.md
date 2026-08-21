@@ -8,9 +8,9 @@ layout: default
 Health Hub brings the health devices you already use — a glucose meter, a
 blood pressure cuff, a thermometer, a pulse oximeter ring, a smart scale —
 into one place, on a computer in your own home. Each device keeps its own
-program in charge of its own data — Health Hub just brings it all
-together: one dashboard, one API, one MQTT feed, without keeping a second
-copy of your data anywhere.
+program in charge of its own history — Health Hub just brings it all
+together into one place you can check, without keeping a second copy of
+your data anywhere.
 
 **Status: documentation only.** The [healthhub repository](https://github.com/home-health-hub/healthhub)
 currently contains no code — it's the architecture and design specification
