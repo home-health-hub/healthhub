@@ -81,3 +81,27 @@ catalog beyond just these two items if scale-brand support ever expands.
   before porting anything from openScale directly — it may have already
   grown Fit 8S support since this daemon last updated its dependency,
   which would be a much smaller lift.
+- **Standard Bluetooth SIG Weight/Body-Composition GATT profile scales.**
+  [chalimov/ha-beurer-bf600](https://github.com/chalimov/ha-beurer-bf600)
+  (a Home Assistant integration for Beurer/Sanitas scales) documents that
+  at least the Sanitas SBF73 variant largely speaks the *official*
+  Bluetooth SIG Weight Scale Service (`0x181D`) and Body Composition
+  Service (`0x181B`) — standard-assigned UUIDs, not vendor-invented ones —
+  layered under a proprietary `0xFFFF` service for multi-user management
+  and consent-code-gated pairing. If true broadly, this is the same
+  situation that led to building `health-thermometer-ble` as a
+  manufacturer-agnostic driver instead of a proprietary one: a driver
+  built against the public Bluetooth SIG spec (not this repo's code)
+  could plausibly work across any scale implementing that same standard
+  profile, not just Beurer/Sanitas. Three caveats: (1) this repo has no
+  LICENSE file — unlike every other reference used so far, which have all
+  been MIT or GPL-3.0 — so referencing the standard-profile facts (public
+  spec UUIDs/semantics) is fine, but porting its actual code for the
+  proprietary consent-code layer would be legally murkier; (2) BF600
+  itself is marked "Untested" in the repo's own table and uses a
+  different service variant (`0xFFF0`) than the one actually verified
+  (`0xFFFF`, SBF73), so this documentation may not transfer directly even
+  setting the license question aside; (3) meaningfully heavier UX than
+  every device this project currently supports — an 8-user onboard
+  database and consent-code-gated access tied to BLE bonding, versus
+  "connect and read a value."
