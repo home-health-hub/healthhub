@@ -1,5 +1,6 @@
 Preliminary.md			# governance/operations: administrator roles, permissions, backup, notifications, session/auth flow
 Claude-foundation.md		# technical design: data model, profiles, measurement semantics, dashboard, REST API, MQTT
 Claude-Addendum-HA.md		# Home Assistant MQTT Discovery addendum (HA-specific subset of the MQTT design)
+HEALTH_HUB_BBT_DAEMON_ADDENDUM.md	# BBT daemon architecture/requirements (copy - maintained in easyathome-bbt-daemon)
 BRANDING.md			# shared visual language, palette, README banner rules, daemon artwork
 BRANDING_SYNC_AUTOMATION.md	# design proposal (not implemented): auto-sync branding assets into daemon repos

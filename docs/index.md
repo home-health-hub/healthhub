@@ -33,6 +33,7 @@ with or without Health Hub:
 - [Preliminary Architecture and Design Specification](Preliminary.html) — governance and operations: administrator roles, permissions, backup, notifications, session/auth flow, and the core architectural principles.
 - [Technical Design Specification](Claude-foundation.html) — the data model, profile/device handling, measurement semantics, dashboard, REST API, and MQTT/Home Assistant Discovery architecture.
 - [Home Assistant MQTT Discovery Addendum](Claude-Addendum-HA.html) — the HA-specific subset of the MQTT design in more detail.
+- [BBT Daemon Addendum](HEALTH_HUB_BBT_DAEMON_ADDENDUM.html) — the architecture and requirements for the basal body temperature daemon (copy — see the page for where it's actually maintained).
 - [Branding](BRANDING.html) — pointer to the canonical [branding repository](https://github.com/home-health-hub/healthhub-branding).
 
 ## Design notes (not yet implemented)
